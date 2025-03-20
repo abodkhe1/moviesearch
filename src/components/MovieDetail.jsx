@@ -12,9 +12,7 @@ function MovieDetail() {
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
-            const response = await axios.get(`/api/?i=${id}&apikey=59d35b16`);
-
-  // const response = await axios.get(`/api/?s=${query}&apikey=59d35b16`);
+          const response = await axios.get(`/api/?i=${id}&apikey=59d35b16`);
         if (response.data.Response === "True") {
           setMovie(response.data);
         } else {
