@@ -15,7 +15,8 @@ function SearchPage() {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?s=${query}&apikey=59d35b16`);
+    //   const response = await axios.get(`http://www.omdbapi.com/?s=${query}&apikey=59d35b16`);
+    const response = await axios.get(`/api/?s=${query}&apikey=59d35b16`);
       if (response.data.Response === "True") {
         setMovies(response.data.Search);
       } else {
